@@ -1,0 +1,682 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     23705,        673]
+NotebookOptionsPosition[     22539,        631]
+NotebookOutlinePosition[     22916,        648]
+CellTagsIndexPosition[     22873,        645]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tests", "=", 
+   RowBox[{"{", "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.564212192494733*^9, 3.5642121975353937`*^9}, {
+  3.5642127980847*^9, 3.56421280167421*^9}, {3.564214331710576*^9, 
+  3.564214399746613*^9}, {3.564214687018424*^9, 3.564214687168235*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"defaultTest", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"\"\<tag\>\"", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<name\>\"", "\[Rule]", "\"\<\>\""}], ",", " ", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<before\>\"", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<after\>\"", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<beforeClass\>\"", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<afterClass\>\"", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<testCases\>\"", "\[Rule]", 
+      RowBox[{"{", "}"}]}]}], "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.564210829814866*^9, 3.564210859943738*^9}, {
+  3.5642109392052383`*^9, 3.5642110019851103`*^9}, {3.564217043122426*^9, 
+  3.564217075367381*^9}, {3.564221726533307*^9, 3.564221729540716*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"TAGPOS", "=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"defaultTest", ",", 
+      RowBox[{"\"\<tag\>\"", "\[Rule]", "_"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NAMEPOS", "=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"defaultTest", ",", 
+      RowBox[{"\"\<name\>\"", "\[Rule]", "_"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"BEFOREPOS", "=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"defaultTest", ",", 
+      RowBox[{"\"\<before\>\"", "\[Rule]", "_"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AFTERPOS", "=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"defaultTest", ",", 
+      RowBox[{"\"\<after\>\"", "\[Rule]", "_"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"BEFORECLASSPOS", "=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"defaultTest", ",", 
+      RowBox[{"\"\<beforeClass\>\"", "\[Rule]", "_"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AFTERCLASSPOS", "=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"defaultTest", ",", 
+      RowBox[{"\"\<afterClass\>\"", "\[Rule]", "_"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TESTCASESPOS", "=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"defaultTest", ",", 
+      RowBox[{"\"\<testCases\>\"", "\[Rule]", "_"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.564216850143914*^9, 3.5642169519767113`*^9}, {
+   3.564216992770274*^9, 3.564217007856119*^9}, 3.564217095970345*^9, {
+   3.564217138986825*^9, 3.5642171419606657`*^9}, {3.564221714553339*^9, 
+   3.564221723856608*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"newTest", "[", 
+   RowBox[{"name_:", "\"\<\>\""}], "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"tag", ",", "t"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"tag", "=", "$ModuleNumber"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"t", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"t", "=", 
+        RowBox[{"Append", "[", 
+         RowBox[{"t", ",", "e"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"e", ",", "defaultTest"}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"t", "[", 
+        RowBox[{"[", "TAGPOS", "]"}], "]"}], "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "=", "tag"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"name", "\[NotEqual]", "\"\<\>\""}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"t", "[", 
+           RowBox[{"[", "NAMEPOS", "]"}], "]"}], "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "=", "name"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tests", "=", 
+      RowBox[{"Append", "[", 
+       RowBox[{"tests", ",", "t"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", 
+      RowBox[{"test", "[", "tag", "]"}], "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.564210360366664*^9, 3.564210369368536*^9}, {
+  3.564210580393437*^9, 3.564210586632895*^9}, {3.5642110185154753`*^9, 
+  3.564211144943119*^9}, {3.5642120028203506`*^9, 3.5642120174896317`*^9}, {
+  3.564212807727531*^9, 3.564212810309587*^9}, {3.564213102444891*^9, 
+  3.564213116698209*^9}, {3.564213150211623*^9, 3.564213190321113*^9}, {
+  3.564213725072331*^9, 3.564213727334453*^9}, {3.564214696118239*^9, 
+  3.564214789855378*^9}, {3.564214898068075*^9, 3.56421497760918*^9}, {
+  3.564215101015029*^9, 3.564215148205229*^9}, {3.564217115145043*^9, 
+  3.564217157206779*^9}, {3.56421728969882*^9, 3.564217290985235*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutGetPosition", "[", "tag_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"tests", ",", 
+      RowBox[{"\"\<tag\>\"", "\[Rule]", "tag"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.5642166608867817`*^9, 3.564216677629744*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"setName", "[", "name_", "]"}]}], ":=", 
+   RowBox[{"mutSetName", "[", 
+    RowBox[{"tag", ",", "name"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"mutSetName", "[", 
+     RowBox[{"tag_", ",", "name_"}], "]"}], ":=", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"p", ",", "oldName"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"p", "=", 
+        RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"tests", "[", 
+           RowBox[{"[", "p", "]"}], "]"}], "[", 
+          RowBox[{"[", "NAMEPOS", "]"}], "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "=", "name"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"getName", "[", "]"}]}], ":=", 
+   RowBox[{"mutGetName", "[", "tag", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mutGetName", "[", "tag_", "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"p", "=", 
+      RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", 
+      RowBox[{"\"\<name\>\"", "/.", 
+       RowBox[{"tests", "[", 
+        RowBox[{"[", "p", "]"}], "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.564215967118679*^9, 3.5642160414766808`*^9}, {
+   3.564216177663843*^9, 3.564216267588332*^9}, {3.564216674324238*^9, 
+   3.5642166937367983`*^9}, {3.5642167485912027`*^9, 3.564216786286481*^9}, {
+   3.564216956400614*^9, 3.564216974711656*^9}, 3.564221734991647*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"addBeforeClass", "[", "beforeClass_", "]"}]}], ":=", 
+   RowBox[{"mutAddBeforeClass", "[", 
+    RowBox[{"tag", ",", "beforeClass"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mutAddBeforeClass", "[", 
+   RowBox[{"tag_", ",", "beforeClass_"}], "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"p", "=", 
+      RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"tests", "[", 
+         RowBox[{"[", "p", "]"}], "]"}], "[", 
+        RowBox[{"[", "BEFORECLASSPOS", "]"}], "]"}], "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "=", 
+      RowBox[{"Append", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"tests", "[", 
+           RowBox[{"[", "p", "]"}], "]"}], "[", 
+          RowBox[{"[", "BEFORECLASSPOS", "]"}], "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}], ",", "beforeClass"}], "]"}]}], 
+     ";"}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"getBeforeClass", "[", "]"}]}], ":=", 
+   RowBox[{"mutGetBeforeClass", "[", "tag", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"mutGetBeforeClass", "[", "tag_", "]"}], ":=", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"p", "=", 
+        RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", 
+        RowBox[{"\"\<beforeClass\>\"", "/.", 
+         RowBox[{"tests", "[", 
+          RowBox[{"[", "p", "]"}], "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"addAfterClass", "[", "afterClass_", "]"}]}], ":=", 
+   RowBox[{"mutAddAftereClass", "[", 
+    RowBox[{"tag", ",", "afterClass"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutAddAfterClass", "[", 
+    RowBox[{"tag_", ",", "afterClass_"}], "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"p", "=", 
+       RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"tests", "[", 
+          RowBox[{"[", "p", "]"}], "]"}], "[", 
+         RowBox[{"[", "AFTERCLASSPOS", "]"}], "]"}], "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"tests", "[", 
+            RowBox[{"[", "p", "]"}], "]"}], "[", 
+           RowBox[{"[", "AFTERCLASSPOS", "]"}], "]"}], "[", 
+          RowBox[{"[", "2", "]"}], "]"}], ",", "afterClass"}], "]"}]}], 
+      ";"}]}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"getAfterClass", "[", "]"}]}], ":=", 
+   RowBox[{"mutGetAfterClass", "[", "tag", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutGetAfterClass", "[", "tag_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"p", "=", 
+       RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"\"\<afterClass\>\"", "/.", 
+        RowBox[{"tests", "[", 
+         RowBox[{"[", "p", "]"}], "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.564216358509912*^9, 3.5642163881091213`*^9}, {
+  3.564216645430146*^9, 3.564216650757143*^9}, {3.564216696874859*^9, 
+  3.564216709366207*^9}, {3.564221674319971*^9, 3.564221705017874*^9}, {
+  3.5642217449963217`*^9, 3.564221864277429*^9}, {3.564222024663308*^9, 
+  3.564222116116941*^9}, {3.56422269740375*^9, 3.5642227500952673`*^9}, {
+  3.564222808070911*^9, 3.564223031125264*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"addBefore", "[", "before_", "]"}]}], ":=", 
+   RowBox[{"mutAddBefore", "[", 
+    RowBox[{"tag", ",", "before"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutAddBefore", "[", 
+    RowBox[{"tag_", ",", "before_"}], "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"p", "=", 
+       RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"tests", "[", 
+          RowBox[{"[", "p", "]"}], "]"}], "[", 
+         RowBox[{"[", "BEFOREPOS", "]"}], "]"}], "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"tests", "[", 
+            RowBox[{"[", "p", "]"}], "]"}], "[", 
+           RowBox[{"[", "BEFOREPOS", "]"}], "]"}], "[", 
+          RowBox[{"[", "2", "]"}], "]"}], ",", "before"}], "]"}]}], ";"}]}], 
+    "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"getBefore", "[", "]"}]}], ":=", 
+   RowBox[{"mutGetTestCases", "[", "tag", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutGetTestCases", "[", "tag_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"p", "=", 
+       RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"\"\<before\>\"", "/.", 
+        RowBox[{"tests", "[", 
+         RowBox[{"[", "p", "]"}], "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.564216358509912*^9, 3.5642163881091213`*^9}, {
+  3.564216645430146*^9, 3.564216650757143*^9}, {3.564216696874859*^9, 
+  3.564216709366207*^9}, {3.564221674319971*^9, 3.564221705017874*^9}, {
+  3.5642217449963217`*^9, 3.564221864277429*^9}, {3.564222024663308*^9, 
+  3.564222116116941*^9}, {3.56422269740375*^9, 3.5642227500952673`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"addAfter", "[", "after_", "]"}]}], ":=", 
+   RowBox[{"mutAddAfter", "[", 
+    RowBox[{"tag", ",", "after"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutAddAfter", "[", 
+    RowBox[{"tag_", ",", "after_"}], "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"p", "=", 
+       RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"tests", "[", 
+          RowBox[{"[", "p", "]"}], "]"}], "[", 
+         RowBox[{"[", "AFTERPOS", "]"}], "]"}], "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"tests", "[", 
+            RowBox[{"[", "p", "]"}], "]"}], "[", 
+           RowBox[{"[", "AFTERPOS", "]"}], "]"}], "[", 
+          RowBox[{"[", "2", "]"}], "]"}], ",", "after"}], "]"}]}], ";"}]}], 
+    "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"getBefore", "[", "]"}]}], ":=", 
+   RowBox[{"mutGetTestCases", "[", "tag", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutGetTestCases", "[", "tag_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"p", "=", 
+       RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"\"\<before\>\"", "/.", 
+        RowBox[{"tests", "[", 
+         RowBox[{"[", "p", "]"}], "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.564216358509912*^9, 3.5642163881091213`*^9}, {
+  3.564216645430146*^9, 3.564216650757143*^9}, {3.564216696874859*^9, 
+  3.564216709366207*^9}, {3.564221674319971*^9, 3.564221705017874*^9}, {
+  3.5642217449963217`*^9, 3.564221864277429*^9}, {3.564222024663308*^9, 
+  3.564222116116941*^9}, {3.56422269740375*^9, 3.5642227947911043`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"addTestCase", "[", "testCase_", "]"}]}], ":=", 
+   RowBox[{"mutAddTestCase", "[", 
+    RowBox[{"tag", ",", "testCase"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutAddTestCase", "[", 
+    RowBox[{"tag_", ",", "testCase_"}], "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"p", "=", 
+       RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"tests", "[", 
+          RowBox[{"[", "p", "]"}], "]"}], "[", 
+         RowBox[{"[", "TESTCASESPOS", "]"}], "]"}], "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"tests", "[", 
+            RowBox[{"[", "p", "]"}], "]"}], "[", 
+           RowBox[{"[", "TESTCASESPOS", "]"}], "]"}], "[", 
+          RowBox[{"[", "2", "]"}], "]"}], ",", "testCase"}], "]"}]}], ";"}]}],
+     "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"test", "/:", 
+   RowBox[{
+    RowBox[{"test", "[", "tag_", "]"}], ".", 
+    RowBox[{"getTestCases", "[", "]"}]}], ":=", 
+   RowBox[{"mutGetTestCases", "[", "tag", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mutGetTestCases", "[", "tag_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"p", "=", 
+       RowBox[{"mutGetPosition", "[", "tag", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"\"\<testCases\>\"", "/.", 
+        RowBox[{"tests", "[", 
+         RowBox[{"[", "p", "]"}], "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.564216358509912*^9, 3.5642163881091213`*^9}, {
+  3.564216645430146*^9, 3.564216650757143*^9}, {3.564216696874859*^9, 
+  3.564216709366207*^9}, {3.564221674319971*^9, 3.564221705017874*^9}, {
+  3.5642217449963217`*^9, 3.564221864277429*^9}, {3.564222024663308*^9, 
+  3.564222116116941*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"t", ".", 
+     RowBox[{"getTestCases", "[", "]"}]}], ")"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "[", "]"}]], "Input",
+ CellChangeTimes->{{3.564221870802637*^9, 3.5642218780618153`*^9}, {
+  3.564222132198103*^9, 3.564222147788908*^9}, {3.5642222614036417`*^9, 
+  3.5642222614656153`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.564221878939884*^9, 3.5642220323663197`*^9, 3.564222089041862*^9, {
+   3.564222124487412*^9, 3.5642221574947023`*^9}, {3.564222198803276*^9, 
+   3.564222224911984*^9}, 3.564222262028206*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"verify", "[", "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Return", "[", "True", "]"}], ";"}]}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"t", ".", 
+  RowBox[{
+  "addTestCase", "[", "\[IndentingNewLine]", "verify", "\[IndentingNewLine]", 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.564221880090003*^9, 3.5642219346529303`*^9}, {
+  3.564222185277224*^9, 3.5642221921646423`*^9}}],
+
+Cell[BoxData[""], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"verify", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.564222171575149*^9, 3.564222172699367*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.5642221941439962`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["t"], "Input",
+ CellChangeTimes->{3.564221953554736*^9}],
+
+Cell[BoxData[
+ RowBox[{"test", "[", "678", "]"}]], "Output",
+ CellChangeTimes->{3.564221954040709*^9, 3.564222084431987*^9, 
+  3.5642221193428926`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["tests"], "Input",
+ CellChangeTimes->{{3.564222041768456*^9, 3.564222042376202*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\<\"tag\"\>", "\[Rule]", "678"}], ",", 
+    RowBox[{"\<\"name\"\>", "\[Rule]", "\<\"qqqqq\"\>"}], ",", 
+    RowBox[{"\<\"before\"\>", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"\<\"after\"\>", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"\<\"beforeClass\"\>", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"\<\"afterClass\"\>", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"\<\"testCases\"\>", "\[Rule]", 
+     RowBox[{"{", "verify", "}"}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.564222042639495*^9, 3.5642220849995947`*^9, 
+  3.5642221197106857`*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 867},
+WindowMargins->{{Automatic, 131}, {Automatic, 82}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 299, 6, 27, "Input"],
+Cell[859, 28, 1025, 21, 148, "Input"],
+Cell[1887, 51, 2180, 60, 118, "Input"],
+Cell[4070, 113, 2197, 51, 208, "Input"],
+Cell[6270, 166, 373, 10, 27, "Input"],
+Cell[6646, 178, 1974, 53, 178, "Input"],
+Cell[8623, 233, 4438, 120, 373, "Input"],
+Cell[13064, 355, 2325, 62, 178, "Input"],
+Cell[15392, 419, 2316, 62, 178, "Input"],
+Cell[17711, 483, 2304, 62, 178, "Input"],
+Cell[CellGroupData[{
+Cell[20040, 549, 357, 9, 27, "Input"],
+Cell[20400, 560, 246, 4, 27, "Output"]
+}, Open  ]],
+Cell[20661, 567, 530, 14, 103, "Input"],
+Cell[21194, 583, 26, 0, 27, "Input"],
+Cell[CellGroupData[{
+Cell[21245, 587, 120, 2, 27, "Input"],
+Cell[21368, 591, 75, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21480, 597, 69, 1, 27, "Input"],
+Cell[21552, 600, 151, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21740, 608, 97, 1, 27, "Input"],
+Cell[21840, 611, 683, 17, 43, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
