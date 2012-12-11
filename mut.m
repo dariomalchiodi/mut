@@ -70,6 +70,30 @@ getTestCases::usage = "";\
 
 run::usage = "";\
 
+mutAssertEquals::usage = "";\
+
+mutAssertEquals::usage = "";\
+
+mutAssertSame::usage = "";\
+
+mutAssertNotSame::usage = "";\
+
+mutAssertTrue::usage = "";\
+
+mutAssertFalse::usage = "";\
+
+mutAssertNull::usage = "";\
+
+mutAssertNotNull::usage = "";\
+
+mutAssertMatches::usage = "";\
+
+mutAssertThrows::usage = "";\
+
+mutAssertFails::usage = "";\
+
+mutAssertEndsWithin::usage = "";\
+
 Begin["`Private`"]
 
 
@@ -244,6 +268,33 @@ mutTestRun[tag_, opts___]:= Block[{isVerbose, result, results},
   If[isVerbose, Print["Done."]];
 
   Return[Count[results, True] == Length[results]];
+];
+
+
+(* ::Subsection:: *)
+(*Assertions*)
+
+
+mutAssertEquals[val_, target_]:= Return[target == val];
+mutAssertEquals[val_, target_, tolerance_]:= Return[Abs[target - val] < tolerance];
+
+mutAssertSame[val_, target_]:= Return[target === val];
+mutAssertNotSame[val_, target_]:= Return[target =!= val];
+
+mutAssertTrue[val_]:= Return[val];
+mutAssertFalse[val_]:= Return[Not[val]];
+
+mutAssertNull[val_]:= Return[val == Null];
+mutAssertNotNull[val_]:= Return[val != Null];
+
+mutAssertMatches[val_, pattern_]:= Return[MatchQ[val, pattern]];
+
+mutAssertThrows[expr_, exception_]:= Return[Catch[expr; $Failed] == exception];
+mutAssertFails[expr_, failExpr_]:= Return[Check[expr, failExpr, $Failed] == $Failed];
+
+mutAssertEndsWithin[expr_, timeout_]:= Block[{result},
+  result = TimeConstrained[expr, timeout];
+  Return[If[result != $Aborted, result, False]];
 ];
 
 

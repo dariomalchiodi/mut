@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      9901,        282]
-NotebookOptionsPosition[      8417,        229]
-NotebookOutlinePosition[      8892,        248]
-CellTagsIndexPosition[      8849,        245]
+NotebookDataLength[      9295,        263]
+NotebookOptionsPosition[      7919,        214]
+NotebookOutlinePosition[      8395,        233]
+CellTagsIndexPosition[      8352,        230]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -210,25 +210,10 @@ Cell[BoxData["True"], "Output",
  CellChangeTimes->{{3.564244900205852*^9, 3.5642449192098293`*^9}, 
    3.564245649425561*^9, 3.5642457882845917`*^9, 3.564246492874165*^9, 
    3.5642465883294888`*^9, 3.564246692788966*^9, 3.564246937279244*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(", 
-   RowBox[{"t", ".", 
-    RowBox[{"getBefore", "[", "]"}]}], ")"}], "[", "]"}]], "Input",
- CellChangeTimes->{{3.56424494702493*^9, 3.56424501214695*^9}, {
-  3.564245672193016*^9, 3.564245676240472*^9}, {3.564246502660972*^9, 
-  3.564246519713867*^9}, {3.564246715061268*^9, 3.564246715361779*^9}}],
-
-Cell[BoxData["\<\"finisco col test case\"\>"], "Print",
- CellChangeTimes->{3.564246520479547*^9, 3.5642467159866056`*^9}]
 }, Open  ]]
 },
 WindowSize->{740, 752},
-WindowMargins->{{Automatic, 1}, {Automatic, 18}},
+WindowMargins->{{Automatic, 39}, {45, Automatic}},
 ShowSelection->True,
 Magnification:>FEPrivate`If[
   FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
@@ -279,14 +264,9 @@ Cell[7129, 197, 265, 3, 30, "Print"],
 Cell[7397, 202, 248, 3, 30, "Print"]
 }, Open  ]],
 Cell[7660, 208, 243, 3, 40, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7940, 216, 337, 7, 40, "Input"],
-Cell[8280, 225, 121, 1, 30, "Print"]
 }, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
