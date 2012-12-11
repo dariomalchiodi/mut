@@ -1,0 +1,292 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9901,        282]
+NotebookOptionsPosition[      8417,        229]
+NotebookOutlinePosition[      8892,        248]
+CellTagsIndexPosition[      8849,        245]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<mut`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.5642334431200953`*^9, 3.5642334513903513`*^9}, {
+  3.564243969058552*^9, 3.564243983449295*^9}, {3.564244101418667*^9, 
+  3.5642441051944304`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t", "=", 
+  RowBox[{"mutNewTest", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.564233460209323*^9, 3.564233477094919*^9}, {
+  3.564233804638139*^9, 3.5642338053347473`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mutTest", "[", "571", "]"}]], "Output",
+ CellChangeTimes->{
+  3.5642334780592623`*^9, {3.564233596032802*^9, 3.564233608188313*^9}, 
+   3.5642336622249203`*^9, {3.564233798912237*^9, 3.564233805975375*^9}, 
+   3.5642429887450027`*^9, 3.564243023545445*^9, 3.564243112791533*^9, 
+   3.564243549574189*^9, 3.5642436755503817`*^9, 3.5642439367359753`*^9, 
+   3.564244107288416*^9, 3.564244232021565*^9, 3.564244733903687*^9, 
+   3.564245638881302*^9, 3.564245775554851*^9, 3.5642458185065947`*^9, {
+   3.564246460066163*^9, 3.564246481117673*^9}, 3.564246575375823*^9, 
+   3.5642466708964443`*^9, 3.564246769260475*^9, 3.5642469261549873`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"t", ".", 
+   RowBox[{"setName", "[", "\"\<uno\>\"", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.564233807091971*^9, 3.564233813150037*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t", ".", 
+  RowBox[{"getName", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5642338142403507`*^9, 3.564233816124653*^9}}],
+
+Cell[BoxData["\<\"uno\"\>"], "Output",
+ CellChangeTimes->{
+  3.564233816628429*^9, 3.564242991351407*^9, 3.564243025969535*^9, 
+   3.564243070760015*^9, 3.564243117453108*^9, 3.564243331525344*^9, 
+   3.5642436788128023`*^9, 3.564243939528264*^9, 3.564244109481781*^9, 
+   3.564244233762192*^9, 3.5642447363751087`*^9, 3.5642456407714157`*^9, 
+   3.564245776990898*^9, 3.5642458199416847`*^9, {3.5642464617847567`*^9, 
+   3.5642464826766853`*^9}, 3.564246577182323*^9, 3.564246672570016*^9, 
+   3.564246771181382*^9, 3.5642469291952887`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"inizio", "[", "]"}], ":=", 
+   RowBox[{"Print", "[", "\"\<Inizio\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fine", "[", "]"}], ":=", 
+   RowBox[{"Print", "[", "\"\<Fine\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"i", "[", "]"}], ":=", 
+   RowBox[{"Print", "[", "\"\<parto col test case\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "]"}], ":=", 
+   RowBox[{"Print", "[", "\"\<finisco col test case\>\"", "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.5642441445116587`*^9, 3.56424418721257*^9}, {
+  3.564246778026637*^9, 3.564246778347891*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"t", ".", 
+  RowBox[{"setBeforeAll", "[", "inizio", "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"t", ".", 
+   RowBox[{"setAfterAll", "[", "fine", "]"}]}], "\n"}], "\n", 
+ RowBox[{"t", ".", 
+  RowBox[{"setBefore", "[", "i", "]"}]}], "\n", 
+ RowBox[{"t", ".", 
+  RowBox[{"setAfter", "[", "f", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.564244190005295*^9, 3.5642441963721027`*^9}, 
+   3.564246785644483*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t", ".", 
+  RowBox[{"getAfter", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5642467947915707`*^9, 3.564246804094069*^9}}],
+
+Cell[BoxData["f"], "Output",
+ CellChangeTimes->{{3.5642467986856327`*^9, 3.564246804547949*^9}, 
+   3.564246931417919*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"test1", "[", "]"}], ":=", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Print", "[", "\"\<ecco il test 1\>\"", "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "True", "]"}], ";"}]}], "\[IndentingNewLine]", 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"test2", "[", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Print", "[", "\"\<ecco il test 2\>\"", "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", "True", "]"}], ";"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.564244828068008*^9, 3.564244864173821*^9}}],
+
+Cell[BoxData[
+ RowBox[{"t", ".", 
+  RowBox[{"addTestCase", "[", "test1", "]"}]}]], "Input",
+ CellChangeTimes->{{3.564244868602161*^9, 3.5642448753785343`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"t", ".", 
+  RowBox[{"addTestCase", "[", "test2", "]"}]}]], "Input",
+ CellChangeTimes->{{3.564244877299795*^9, 3.564244882594367*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t", ".", 
+  RowBox[{"run", "[", 
+   RowBox[{"Verbose", "\[Rule]", "False"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.56424489242943*^9, 3.5642449187257023`*^9}, {
+  3.56424669129135*^9, 3.564246691994769*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Inizio\"\>"], "Print",
+ CellChangeTimes->{{3.5642449002010803`*^9, 3.564244919185491*^9}, 
+   3.564245649383556*^9, 3.564245788245654*^9, 3.5642464928281097`*^9, 
+   3.564246588282831*^9, 3.564246692772986*^9, 3.5642469372586813`*^9}],
+
+Cell[BoxData["\<\"parto col test case\"\>"], "Print",
+ CellChangeTimes->{{3.5642449002010803`*^9, 3.564244919185491*^9}, 
+   3.564245649383556*^9, 3.564245788245654*^9, 3.5642464928281097`*^9, 
+   3.564246588282831*^9, 3.564246692772986*^9, 3.564246937261759*^9}],
+
+Cell[BoxData["\<\"ecco il test 1\"\>"], "Print",
+ CellChangeTimes->{{3.5642449002010803`*^9, 3.564244919185491*^9}, 
+   3.564245649383556*^9, 3.564245788245654*^9, 3.5642464928281097`*^9, 
+   3.564246588282831*^9, 3.564246692772986*^9, 3.564246937264901*^9}],
+
+Cell[BoxData["\<\"finisco col test case\"\>"], "Print",
+ CellChangeTimes->{{3.5642449002010803`*^9, 3.564244919185491*^9}, 
+   3.564245649383556*^9, 3.564245788245654*^9, 3.5642464928281097`*^9, 
+   3.564246588282831*^9, 3.564246692772986*^9, 3.564246937267295*^9}],
+
+Cell[BoxData["\<\"parto col test case\"\>"], "Print",
+ CellChangeTimes->{{3.5642449002010803`*^9, 3.564244919185491*^9}, 
+   3.564245649383556*^9, 3.564245788245654*^9, 3.5642464928281097`*^9, 
+   3.564246588282831*^9, 3.564246692772986*^9, 3.564246937269951*^9}],
+
+Cell[BoxData["\<\"ecco il test 2\"\>"], "Print",
+ CellChangeTimes->{{3.5642449002010803`*^9, 3.564244919185491*^9}, 
+   3.564245649383556*^9, 3.564245788245654*^9, 3.5642464928281097`*^9, 
+   3.564246588282831*^9, 3.564246692772986*^9, 3.564246937272417*^9}],
+
+Cell[BoxData["\<\"finisco col test case\"\>"], "Print",
+ CellChangeTimes->{{3.5642449002010803`*^9, 3.564244919185491*^9}, 
+   3.564245649383556*^9, 3.564245788245654*^9, 3.5642464928281097`*^9, 
+   3.564246588282831*^9, 3.564246692772986*^9, 3.564246937274745*^9}],
+
+Cell[BoxData["\<\"Fine\"\>"], "Print",
+ CellChangeTimes->{{3.5642449002010803`*^9, 3.564244919185491*^9}, 
+   3.564245649383556*^9, 3.564245788245654*^9, 3.5642464928281097`*^9, 
+   3.564246588282831*^9, 3.564246692772986*^9, 3.564246937277049*^9}]
+}, Open  ]],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.564244900205852*^9, 3.5642449192098293`*^9}, 
+   3.564245649425561*^9, 3.5642457882845917`*^9, 3.564246492874165*^9, 
+   3.5642465883294888`*^9, 3.564246692788966*^9, 3.564246937279244*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"t", ".", 
+    RowBox[{"getBefore", "[", "]"}]}], ")"}], "[", "]"}]], "Input",
+ CellChangeTimes->{{3.56424494702493*^9, 3.56424501214695*^9}, {
+  3.564245672193016*^9, 3.564245676240472*^9}, {3.564246502660972*^9, 
+  3.564246519713867*^9}, {3.564246715061268*^9, 3.564246715361779*^9}}],
+
+Cell[BoxData["\<\"finisco col test case\"\>"], "Print",
+ CellChangeTimes->{3.564246520479547*^9, 3.5642467159866056`*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{Automatic, 1}, {Automatic, 18}},
+ShowSelection->True,
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 239, 4, 40, "Input"],
+Cell[CellGroupData[{
+Cell[821, 28, 198, 4, 40, "Input"],
+Cell[1022, 34, 664, 10, 40, "Output"]
+}, Open  ]],
+Cell[1701, 47, 178, 4, 40, "Input"],
+Cell[CellGroupData[{
+Cell[1904, 55, 146, 3, 40, "Input"],
+Cell[2053, 60, 541, 8, 40, "Output"]
+}, Open  ]],
+Cell[2609, 71, 719, 22, 110, "Input"],
+Cell[3331, 95, 420, 11, 133, "Input"],
+Cell[CellGroupData[{
+Cell[3776, 110, 147, 3, 40, "Input"],
+Cell[3926, 115, 122, 2, 40, "Output"]
+}, Open  ]],
+Cell[4063, 120, 883, 24, 225, "Input"],
+Cell[4949, 146, 159, 3, 40, "Input"],
+Cell[5111, 151, 157, 3, 40, "Input"],
+Cell[CellGroupData[{
+Cell[5293, 158, 234, 5, 40, "Input"],
+Cell[CellGroupData[{
+Cell[5552, 167, 252, 3, 30, "Print"],
+Cell[5807, 172, 263, 3, 30, "Print"],
+Cell[6073, 177, 258, 3, 30, "Print"],
+Cell[6334, 182, 265, 3, 30, "Print"],
+Cell[6602, 187, 263, 3, 30, "Print"],
+Cell[6868, 192, 258, 3, 30, "Print"],
+Cell[7129, 197, 265, 3, 30, "Print"],
+Cell[7397, 202, 248, 3, 30, "Print"]
+}, Open  ]],
+Cell[7660, 208, 243, 3, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7940, 216, 337, 7, 40, "Input"],
+Cell[8280, 225, 121, 1, 30, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
