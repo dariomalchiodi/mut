@@ -267,7 +267,17 @@ mutTestRun[tag_, opts___]:= Block[{isVerbose, result, results},
   (mutTest[tag].getAfterAll[])[];
   If[isVerbose, Print["Done."]];
 
-  Return[Count[results, True] == Length[results]];
+  If[Count[results, True] == Length[results],
+    Return[True],
+  (* else *)
+    If[isVerbose,
+      Print["The following tests did not succeed:"];
+      Do[
+        Print[t, " "],
+      {t, Extract[t.getTestCases[], Position[results, False]]}]
+    ];
+    Return[False];
+  ];
 ];
 
 
@@ -290,7 +300,7 @@ mutAssertNotNull[val_]:= Return[val != Null];
 mutAssertMatches[val_, pattern_]:= Return[MatchQ[val, pattern]];
 
 mutAssertThrows[expr_, exception_]:= Return[Catch[expr; $Failed] == exception];
-mutAssertFails[expr_, failExpr_]:= Return[Check[expr, failExpr, $Failed] == $Failed];
+mutAssertFails[expr_, failExpr_]:= Return[Check[expr, $Failed, failExpr] == $Failed];
 
 mutAssertEndsWithin[expr_, timeout_]:= Block[{result},
   result = TimeConstrained[expr, timeout];
